@@ -39,7 +39,7 @@ export function Stepper({ steps, initialStep = 0 }: IStepperProps) {
             <li
               key={step.label}
               className={cn(
-                "inline-block text-xs px-2 py-1 rounded-md",
+                "inline-block text-md px-2 py-1 rounded-md",
                 index === currentStep && "bg-primary text-primary-foreground"
               )}
             >

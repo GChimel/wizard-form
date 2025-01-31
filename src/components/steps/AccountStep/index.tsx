@@ -29,7 +29,9 @@ export function AccountStep() {
 
       <div className="space-y-4">
         <div className="space-y-2">
-          <Label htmlFor="email">E-mail</Label>
+          <Label htmlFor="email" className="text-md">
+            E-mail
+          </Label>
           <Input id="email" {...form.register("accountStep.email")} />
           {form.formState.errors.accountStep?.email?.message && (
             <small className="text-destructive">
@@ -39,7 +41,9 @@ export function AccountStep() {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="password">Senha</Label>
+          <Label htmlFor="password" className="text-md">
+            Senha
+          </Label>
           <Input
             id="password"
             type="password"
