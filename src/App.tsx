@@ -1,5 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FormProvider, useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
 import { z } from "zod";
 import { Stepper } from "./components/Stepper";
 import { AccountStep } from "./components/steps/AccountStep";
@@ -28,8 +29,10 @@ export function App() {
   });
 
   const handleSubmit = form.handleSubmit((data) => {
-    console.log(data);
     // API call
+    console.log(data);
+
+    toast.success("Form enviado com sucesso!");
   });
 
   return (
@@ -54,6 +57,8 @@ export function App() {
           />
         </form>
       </FormProvider>
+
+      <Toaster />
     </div>
   );
 }
